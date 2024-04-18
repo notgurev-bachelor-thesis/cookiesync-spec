@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "./;spec";
+
+service CookieStreamer {
+  rpc GetCookies(GetCookiesRequest) returns (stream Cookie) {}
+}
+
+message GetCookiesRequest {
+  string host = 1;
+}
+
+message Cookie {
+  string user_id = 1;
+  uint32 dsp_id = 2;
+  string buyer_uid = 3;
+}
