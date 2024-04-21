@@ -1,3 +1,3 @@
 package spec
 
-//go:generate protoc -I . --go_out=. --go-grpc_out=. ./spec.proto
+//go:generate protoc --go_out=. --go-grpc_out=. ./spec.proto
